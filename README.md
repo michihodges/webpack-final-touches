@@ -1,5 +1,5 @@
 # Webpack Final Touches
-The final touches to complete setting up Webpack is to add functionallity to the pre-written JavaScript code, tweak Production and implement Service Workers in order for the web app to work offline. 
+The final touches to complete setting up Webpack is to add functionallity to the pre-written JavaScript code, tweak production and implement service workers in order for the web app to work offline.
 
 ## Functionality
 The JavaScript event code is not working when running `npm run build-dev` in the Command Line. The browser window should open using `localhost:8080` as the URL and the CSS styles should load after clicking OK on the alert 'I exist!'. This is great, but the result after entering Picard, Janeway, Kirk, Archer or Georgiou as input in the form field throws up the same alert 'I exist!' again instead of 'Welcome, Captain!' and there is no result added to the section Form Results underneath the input field.
@@ -59,7 +59,7 @@ Client.checkForName(formText)
 ```
 
 ### Server
-The Express server is not doing anything, because `localhost:8080` is being used by the Webpack Dev Server as well as the Exxpress server. Two servers cannot be run on the same localhost. To affirm that the Express server is not doing anything, run `npm start` in the Command Line and it will be evident that there is no CSS styling.
+So, the input field is now working and the form results section is not. With the current setup, form results will never work, because no `dist` folder is built in development mode and never will be built. Production mode does build a `dist` folder. However, the form results section still does not work once the Express server is started, because both the Webpack Dev Server and the Express server use `localhost:8080`. The answer is to use a different localhost for either server. Below is a set of instructions on how to tweak the setup for the Express server:
 
 #### formHandler
 
