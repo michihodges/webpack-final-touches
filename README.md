@@ -62,8 +62,29 @@ Client.checkForName(formText)
 So, the input field is now working and the form results section is not. With the current setup, form results will never work, because no `dist` folder is built in development mode and never will be built. Production mode does build a `dist` folder. However, the form results section still does not work once the Express server is started, because both the Webpack Dev Server and the Express server use `localhost:8080`. The answer is to use a different localhost for either server. Below is a set of instructions on how to tweak the setup for the Express server:
 
 #### formHandler
-
+Change the localhost in the fetch request from `localhost:8080` to `localhost:8081`:
+```js
+// Old
+fetch('http://localhost:8080/test')
+```
+```js
+// New
+fetch('http://localhost:8081/test')
+```
 #### src/server/index.js
+ Change the localhost in the server from `localhost:8080` to `localhost:8081`:
+ ```js
+ // Old
+app.listen(8080, function () {
+    console.log('Example app listening on port 8080!')
+})
+ ```
+ ```js
+ // New
+app.listen(8081, function () {
+    console.log('Example app listening on port 8081!')
+})
+ ```
 
 ## Production
 
