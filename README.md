@@ -34,14 +34,6 @@ export {
 #### src/client/views/index.html
 Change every `handleSubmit(event)` to `Client.handleSubmit(event)`:
 ```html
-<!--Old-->
-<form class="" onsubmit="return handleSubmit(event)">
-    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
-</form>
-```
-```html
-<!--New-->
 <form class="" onsubmit="return Client.handleSubmit(event)">
     <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
@@ -50,11 +42,6 @@ Change every `handleSubmit(event)` to `Client.handleSubmit(event)`:
 #### src/client/js/formHandler.js
 Change `checkForName(formText)` to `Client.checkForName(formText)`:
 ```js
-// Old
-checkForName(formText)
-```
-```js
-// New
 Client.checkForName(formText)
 ```
 
@@ -64,23 +51,11 @@ So, the input field is now working and the form results section is not. With the
 #### formHandler
 Change the localhost in the fetch request from `localhost:8080` to `localhost:8081`:
 ```js
-// Old
-fetch('http://localhost:8080/test')
-```
-```js
-// New
 fetch('http://localhost:8081/test')
 ```
 #### src/server/index.js
  Change the localhost in the server from `localhost:8080` to `localhost:8081`:
  ```js
- // Old
-app.listen(8080, function () {
-    console.log('Example app listening on port 8080!')
-})
- ```
- ```js
- // New
 app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
