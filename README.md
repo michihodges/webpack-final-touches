@@ -48,7 +48,7 @@ Change every `handleSubmit(event)` to `Client.handleSubmit(event)`:
 </form>
 ```
 #### src/client/js/formHandler.js
-Change `checkForName(formText)` to `Client.checkForName`:
+Change `checkForName(formText)` to `Client.checkForName(formText)`:
 ```js
 // Old
 checkForName(formText)
