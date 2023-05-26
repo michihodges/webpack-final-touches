@@ -62,6 +62,7 @@ app.listen(8081, function () {
  ```
 
 ## Production
+Now that development mode is up and running it is time to focus on production mode. Production mode is all about optimizing file size which in turn makes websites and web apps faster. The biggest contributers to slow websites/web apps are, JavaScript, styles (CSS) and large/many images. Evidently, Webpack already minifies (compresses) JavaScript and styles into one `main.js` file with one illegible line of code. Personally, I do not see the need for tweaking anything, because everything works; there are no image sizes/quantity to worry about; JavaScript and styles are reduced and minified to one file. Nonetheless, apparently it is *best practice* to have Webpack build a separate minified styles file and for that more plugins are required. Follow the steps below to install and configure the relevant plugins:
 
 ## Service Workers
 
