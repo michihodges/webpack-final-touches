@@ -45,6 +45,31 @@ Change `checkForName(formText)` to `Client.checkForName(formText)`:
 Client.checkForName(formText)
 ```
 
+### Test
+Build Webpack in development mode and rev up the Webpack Dev Server:
+```
+npm run build-dev
+```
+Press OK on the 'I exist!' alert.</br>
+Enter Picard, Janeway, Kirk, Archer or Georgiou in the input field.</br>
+Press OK on the 'Welcome, Captain!' alert.</br>
+Stop the Webpack Dev Server with `control + c`:
+```
+control + C
+```
+Build Webpack in production mode:
+```
+npm run build-prod
+```
+Run the Express server:
+```
+npm start
+```
+Stop the Express Server with `control + c`:
+```
+control + C
+```
+
 ### Server
 So, the input field is now working and the form results section is not. With the current setup, form results will never work, because no `dist` folder is built in development mode and never will be built. Production mode does build a `dist` folder. However, the form results section still does not work once the Express server is started, because both the Webpack Dev Server and the Express server use `localhost:8080`. The answer is to use a different localhost for either server. Below is a set of instructions on how to tweak the setup for the Express server:
 
@@ -61,8 +86,20 @@ app.listen(8081, function () {
 })
  ```
 
+### Test
+
 ## Production
 Now that development mode is up and running it is time to focus on production mode. Production mode is all about optimizing file size which in turn makes websites and web apps faster. The biggest contributers to slow websites/web apps are, JavaScript, styles (CSS) and large/many images. Evidently, Webpack already minifies (compresses) JavaScript and styles into one `main.js` file with one illegible line of code. Personally, I do not see the need for tweaking anything, because everything works; there are no image sizes/quantity to worry about; JavaScript and styles are reduced and minified to one file. Nonetheless, apparently it is *best practice* to have Webpack build a separate minified styles file and for that more plugins are required. Follow the steps below to install and configure the relevant plugins:
+
+### Installation
+Install the following NPM packages:
+```
+
+```
+
+### Configuration
+
+### Test
 
 ## Service Workers
 
