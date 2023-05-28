@@ -51,7 +51,8 @@ Build Webpack in development mode and rev up the Webpack Dev Server:
 npm run build-dev
 ```
 Press OK on the 'I exist!' alert.</br>
-Enter Picard, Janeway, Kirk, Archer or Georgiou in the input field and press the submit button</br>
+Enter Picard, Janeway, Kirk, Archer or Georgiou in the input field and press the submit button.</br>
+Note that if spelt incorrectly or if anything else is entered no alert will pop up.</br>
 Press OK on the 'Welcome, Captain!' alert.</br>
 Stop the Webpack Dev Server with `control + c`:
 ```
@@ -65,7 +66,7 @@ Run the Express server:
 ```
 npm start
 ```
-Stop the Express Server with `control + c`:
+Stop the Express Server with `control + C`:
 ```
 control + C
 ```
