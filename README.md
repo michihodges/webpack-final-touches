@@ -66,10 +66,12 @@ Run the Express server:
 ```
 npm start
 ```
+Test the same way as before.</br>
 Stop the Express Server with `control + C`:
 ```
 control + C
 ```
+In both tests the alert 'Welcome, Captain!' should pop up when one of the correct names has been enetered. However, it is also evident that the form results section is still empty in both development and production modes.
 
 ### Server
 So, the input field is now working and the form results section is not. With the current setup, form results will never work, because no `dist` folder is built in development mode and never will be built. Production mode does build a `dist` folder. However, the form results section still does not work once the Express server is started, because both the Webpack Dev Server and the Express server use `localhost:8080`. The answer is to use a different localhost for either server. Below is a set of instructions on how to tweak the setup for the Express server:
