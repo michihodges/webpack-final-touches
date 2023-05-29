@@ -54,7 +54,7 @@ Press OK on the 'I exist!' alert.</br>
 Enter Picard, Janeway, Kirk, Archer or Georgiou in the input field and click the submit button.</br>
 Note that if spelt incorrectly or if anything else is entered no alert will pop up.</br>
 Press OK on the 'Welcome, Captain!' alert.</br>
-Stop the Webpack Dev Server with `control + c`:
+Stop the Webpack Dev Server with `control + C`:
 ```
 control + C
 ```
