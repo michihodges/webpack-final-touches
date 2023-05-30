@@ -46,14 +46,17 @@ Client.checkForName(formText)
 ```
 
 ### Test
+#### Development Mode
 Build Webpack in development mode and rev up the Webpack Dev Server:
 ```
 npm run build-dev
 ```
-Press OK on the 'I exist!' alert. Enter Picard, Janeway, Kirk, Archer or Georgiou in the input field and click the submit button. Note that if spelt incorrectly or if anything else is entered no alert will pop up. Press OK on the 'Welcome, Captain!' alert. Testing is finished and stop the Webpack Dev Server with `control + C`:
+Press OK on the 'I exist!' alert. Enter Picard, Janeway, Kirk, Archer or Georgiou in the input field and click the submit button. Note that if spelt incorrectly or if anything else is entered no alert will pop up. Press OK on the 'Welcome, Captain!' alert and and stop the Webpack Dev Server with `control + C` in the Command Line to finish testing:
 ```
 control + C
 ```
+
+#### Production Mode
 Build Webpack in production mode:
 ```
 npm run build-prod
@@ -62,11 +65,11 @@ Run the Express server:
 ```
 npm start
 ```
-Test the same way as before. Stop the Express server after testing is finished:
+Test the same way as before and stop the Express server with `command + C` to finish testing:
 ```
 control + C
 ```
-In both tests the alert 'Welcome, Captain!' should pop up when one of the correct names has been enetered. However, it is also evident that the Form Results section is still empty in both development and production modes.
+In both tests, the alert 'Welcome, Captain!' should pop up when one of the correct names has been enetered and submitted. However, it is also evident that the Form Results section is still empty in both development and production modes.
 
 ### Server
 So, the input field is now working and the Form Results section is not. With the current setup, Form Results will never work in development mode, because no `dist` folder is built and never will be built. Production mode does build a `dist` folder. However, the Form Results section still does not work once the Express server is started, because both the Webpack Dev Server and the Express server use `localhost:8080`. The answer is to use a different localhost for either server. Below is a set of instructions on how to tweak the setup for the Express server:
