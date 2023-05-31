@@ -105,9 +105,7 @@ rm -rf dist
 ```
 
 ## Production
-Now that development mode is up and running it is time to focus on production mode. Production mode is all about keeping things as small and light as possible. The biggest contributers to slow websites/web apps are, JavaScript, styles (CSS) and large/many images. Webpack already minifies (compresses) JavaScript and styles into one `main.js` file with one illegible line of code.
-
-Personally, I do not see the need for tweaking anything, because everything works; there are no image sizes/quantity to worry about; JavaScript and styles are reduced and minified to one file. Nonetheless, apparently it is *best practice* to have Webpack build a separate minified styles file and for that more plugins are required. Follow the steps below to install and configure the relevant plugins:
+Now that development mode is up and running it is time to focus on production mode. Production mode is all about keeping things as small and light as possible. The biggest contributers to slow websites/web apps are, JavaScript, styles (CSS) and large/many images. Webpack already minifies (compresses) JavaScript into one `main.js` file with one illegible line of code. What Webpack currently does with styles (CSS) is that the plugin `style-loader` adds them inline to the HTML tags in `index.html`. A better way is for Webpack to build a minified `main.css` file and for that the following steps will need to be implemented:
 
 ### Installation
 Install the following NPM packages:
