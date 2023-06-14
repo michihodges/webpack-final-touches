@@ -116,6 +116,7 @@ npm i -D --legacy-peer-deps optimize-css-assets-webpack-plugin@1.3.0
 ```
 
 ### Configuration
+In the `webpack.prod.js` file change the `style-loader` in the Sass stack to `MiniCssExtractPlugin.loader`:
 
 ### Test
 
