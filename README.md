@@ -110,7 +110,7 @@ Now that development mode is up and running it is time to focus on production mo
 ### Installation
 Install the following NPM packages:
 ```
-npm i -D --legacy-peer-deps mini-css-extract-plugin@0.8.0
+npm i -D --legacy-peer-deps mini-css-extract-plugin@0.9.0
 npm i -D --legacy-peer-deps terser-webpack-plugin@5.0.3
 npm i -D --legacy-peer-deps optimize-css-assets-webpack-plugin@1.3.0
 ```
