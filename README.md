@@ -124,6 +124,7 @@ Run production mode and rev up the server:
 npm run build-prod
 npm start
 ```
+The `dist` folder should now have a `main.css` file.
 
 ## Service Workers
 
