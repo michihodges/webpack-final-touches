@@ -125,6 +125,14 @@ npm run build-prod
 npm start
 ```
 The `dist` folder should now have a `main.css` file.
+Stop the Express server:
+```
+control + C
+```
+Delete `dist` folder:
+```
+rm -rf dist
+```
 
 ## Service Workers
 
