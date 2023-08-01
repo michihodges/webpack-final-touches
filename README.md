@@ -124,7 +124,8 @@ Run production mode and rev up the server:
 npm run build-prod
 npm start
 ```
-The `dist` folder should now have a `main.css` file.
+The `dist` folder should now have a `main.css` file :raised_hands:
+
 Stop the Express server:
 ```
 control + C
