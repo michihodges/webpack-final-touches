@@ -95,12 +95,9 @@ npm start
 ```
 A `dist` folder should have been built and the console should state 'Example app listening in port 8081!'. Switch to the browser, enter the required input in the input field, press the submit button and click OK on the 'Welcome, Captain' alert. This time Form Results should show the message 'this is a message'.
 
-Stop the Express server:
+Stop the Express server and delete `dist` folder:
 ```
 control + C
-```
-Delete `dist` folder:
-```
 rm -rf dist
 ```
 
@@ -126,12 +123,9 @@ npm start
 ```
 Congrats! &nbsp; :raised_hands: &nbsp; The `dist` folder should now have a `main.css` file.
 
-Stop the Express server:
+Stop the Express server and delete `dist` folder:
 ```
 control + C
-```
-Delete `dist` folder:
-```
 rm -rf dist
 ```
 
