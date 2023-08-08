@@ -123,7 +123,7 @@ npm start
 ```
 Congrats! &nbsp; :raised_hands: &nbsp; The `dist` folder should now have a `main.css` file.
 
-Stop the Express server and delete `dist` folder:
+Stop the server and delete `dist` folder:
 ```
 control + C
 rm -rf dist
