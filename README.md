@@ -130,5 +130,6 @@ rm -rf dist
 ```
 
 ## Service Workers
+Services Workers makes web apps work offline.
 
 ## Review
